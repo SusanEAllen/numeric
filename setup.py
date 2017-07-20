@@ -1,5 +1,4 @@
 from setuptools import setup
-
 setup(
     name = "numlabs",
     py_modules=['numlabs'],
