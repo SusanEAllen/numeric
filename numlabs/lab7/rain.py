@@ -148,7 +148,7 @@ def make_graph(u, h, dt, n_time):
 
     # Create a figure with 2 sub-plots
     fig, (ax_u, ax_h) = plt.subplots(2,1, figsize=(10,10))
-    
+
     # Set the figure title, and the axes labels.
     the_title = fig.text(0.25, 0.95, 'Results from t = %.3fs to %.3fs' % (0, dt*n_time))
     ax_u.set_ylabel('u [cm/s]')
@@ -156,7 +156,7 @@ def make_graph(u, h, dt, n_time):
     ax_h.set_xlabel('Grid Point')
 
     # We use color to differentiate lines at different times.  Set up the color map
-    cmap = plt.get_cmap('spectral')
+    cmap = plt.get_cmap('viridis')
     cNorm  = colors.Normalize(vmin=0, vmax=1.*n_time)
     cNorm_inseconds = colors.Normalize(vmin=0, vmax=1.*n_time*dt)
     scalarMap = cmx.ScalarMappable(norm=cNorm, cmap=cmap)
